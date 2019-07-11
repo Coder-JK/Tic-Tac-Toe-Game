@@ -1,0 +1,57 @@
+In this code graphics is used 
+
+For that 'Graphics.h' header file is included and other header file which are required are used in the code.
+
+After the header files some variables are defined and given values so it is easy to take the return value of the function is required in this code.
+
+Structure is described so that the rectangle is created in which we can write X and O in this the values are given in such a way that
+in set of 4 values the first 2 are the coordinates the of top left corner of the rectangle and the remaining 2 are the coordinates of the bottom right corner
+
+The function which are required are for the game are declared such as 'show mouse pointer','hide mouse pointer','on left mouse button down',
+'on right mouse button' and many more.
+
+Then to initialize the graphics mode the 'initgraph()' inbuilt funtion is used
+
+The grid is draw eith the 'drawgrid()' function which draws the lines horzontal and vertical lines.
+
+As when we switch to gaphics mode the mouse cursor we get is not available so for that we need a function which enables us to get 
+mouse pointer for that we have used the user defined function 'showmousepointer()'
+
+To know where the mouse is their and when the mouse is clicked the computer must know where we have clicked and where it have to 
+draw X or O
+
+After getting mouse position to draw X and O when left button or right button is clicked 'drawXandO()' function is called to draw X or O
+To check whether game is overafetr every move 'isgameover()' function is called which will return value and that value is important 
+and used further to print winner and other things.
+
+After the game is over if the player wants to play again or not for that 'resetgame()' function is used.
+
+The graphics mode which is initialised at start must need to the closed so for that we have used the inbuilt function 'closegraph()' and
+function 'restorcrtmode()' is used to switch to text mode at fullspeed.
+
+int main function here.
+
+The function which we have declared before int main now its time to define that function the first function which I have defined is the
+Initialisation of mouse in this function 'int86()' function is used which in an inbuilt function releated to the mouse operation in 8086 processor
+
+and other mouse function are also defined using int86() function. Functions like 'showmousepointer()','hidemousepointer()','getmouseposition()'
+
+In all this we need a grid to write X and O so next I have defined the function 'drawgrid()' in this you will find some new words
+such as 'cleardevice()' it is a inbulit function which is used to clear everthing on the screen which we have already written or drawn in previous session.
+then their is 'Setcolor()' which is used to give the color to the lines.
+their comes 'bar()' function this is also a inbuilt function included in the graphics.h and the main work of this function is to make a 
+2-D rectangular filled bar in which the values are passed such as first is X-coordinate of top left corner 
+second is Y-coordinate of top left corner
+third is X-coordinate of bottom right corner
+fourth is Y-coordinate of bottom right corner
+
+After all this we need draw X and O for that I have defined functions 'drawXandO()', 'drawX()', 'drawO()'
+
+then comes to check whether the game is over or not so for that I have used a function 'isgameover()' and to find a winner I have used
+the function 'findwinner()'
+
+In function I have used a static int pattern the change in this pattern will return a value and the returned value will give a winner.
+
+To reset the game I have used the function 'resetgame()' in which I am asking the player to continue or not.
+
+This is a simple program I hope it may help you out and give something new to teach. 
